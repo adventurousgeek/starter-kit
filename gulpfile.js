@@ -10,6 +10,7 @@ var uglify = require('gulp-uglify');
 gulp.task('styles', function () {
     gulp.src(['src-assets/scss/bootstrap-components/bootstrap.scss','./src-assets/scss/style.scss'])
         .pipe(sass())
+        .pipe(concat('style.css'))
         .pipe(cleanCSS({compatibility: 'ie8'})) //Later on
         .pipe(gulp.dest('./'));
 });
