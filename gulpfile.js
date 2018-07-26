@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify');
 
 // Compile & Generate Style File
 gulp.task('styles', function () {
-    gulp.src(['src-assets/scss/bootstrap-components/bootstrap.scss','./src-assets/scss/style.scss'])
+    gulp.src(['./src-assets/scss/style.scss','src-assets/scss/bootstrap-components/bootstrap.scss'])
         .pipe(sass())
         .pipe(concat('style.css'))
         .pipe(cleanCSS({compatibility: 'ie8'})) //Later on
@@ -47,8 +47,7 @@ gulp.task('scripts', function() {
         'src-assets/javascripts/components/home.js',
 
     ])
-        .pipe(concat('scripts.js'))
-        .pipe(uglify())
+        .pipe(conca glify())
         .pipe( gulp.dest('./assets/js/'));
 
 
