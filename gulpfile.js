@@ -47,7 +47,8 @@ gulp.task('scripts', function() {
         'src-assets/javascripts/components/home.js',
 
     ])
-        .pipe(conca glify())
+        .pipe(concat('scripts.js'))
+        .pipe(uglify())
         .pipe( gulp.dest('./assets/js/'));
 
 
